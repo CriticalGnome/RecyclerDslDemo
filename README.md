@@ -2,25 +2,25 @@
 
 Step 1. Add it in your root `build.gradle` at the end of repositories:
 
-```
+```groovy
 allprojects {
     repositories {
-        ...
+        //...
         maven { url 'https://jitpack.io' }
     }
 }
 ```
   
 Step 2. Add the dependency
-  ```
+  ```groovy
   dependencies {
-        ...
+        //...
 	    implementation 'com.github.CriticalGnome:RecyclerDslDemo:1.0'
 	}
   ```
 
 Step 3. Use it!
-```
+```kotlin
 binding.recycler.adapter = recyclerViewAdapter(items) {
     define()
         .viewHolderOf(Item1Binding::inflate)
@@ -35,7 +35,7 @@ binding.recycler.adapter = recyclerViewAdapter(items) {
 }
 ```
 or
-```
+```kotlin
 binding.recycler.adapter = recyclerViewAdapter {
     define()
         .viewHolderOf(Item1Binding::inflate)
